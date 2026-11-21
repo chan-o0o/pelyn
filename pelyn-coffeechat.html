@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>30분 커피챗 요청 · 미팅 이후의 일을 묻습니다 | 숭실대 시너지 × Pelyn AI</title>
+<meta name="robots" content="noindex, nofollow" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Pretendard', 'system-ui', 'sans-serif'] },
+        colors: {
+          ink: { DEFAULT: '#14171F', 2: '#4B5262', 3: '#8A92A3' },
+          brand: { DEFAULT: '#3B5BFD', deep: '#2238B8', tint: '#EEF2FF' },
+          paper: '#F7F8FB'
+        },
+        boxShadow: {
+          soft: '0 1px 2px rgba(20,23,31,0.04), 0 8px 24px -12px rgba(20,23,31,0.12)',
+          float: '0 12px 40px -16px rgba(59,91,253,0.35)'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+  .tab-btn[aria-selected="true"] { background:#14171F; color:#fff; box-shadow:0 8px 24px -12px rgba(20,23,31,.5); }
+  .tab-panel[hidden] { display:none; }
+  .grid-bg { background-image: radial-gradient(rgba(59,91,253,0.10) 1px, transparent 1px); background-size: 22px 22px; }
+</style>
+</head>
+<body class="bg-paper text-ink font-sans">
+
+<!-- ========== NAV ========== -->
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-black/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-2 text-sm font-semibold">
+      <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-ink text-white text-xs">S</span>
+      <span>시너지 <span class="text-ink-3 font-normal">×</span> Pelyn AI</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-7 text-sm text-ink-2">
+      <a href="#why" class="hover:text-ink">프로젝트 소개</a>
+      <a href="#problem" class="hover:text-ink">우리가 보는 문제</a>
+      <a href="#solution" class="hover:text-ink">Pelyn Crew</a>
+      <a href="#plan" class="hover:text-ink">대화 주제</a>
+      <a href="#how" class="hover:text-ink">진행 방식</a>
+    </nav>
+    <a href="#contact" class="rounded-full bg-ink text-white text-sm font-semibold px-4 py-2 hover:bg-black">커피챗 응하기</a>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 grid-bg [mask-image:radial-gradient(70%_60%_at_50%_30%,#000,transparent)]"></div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-16 sm:pt-28 sm:pb-24">
+    <div class="flex flex-wrap gap-2 mb-7">
+      <span class="rounded-full bg-white border border-black/5 shadow-soft px-3 py-1 text-xs font-semibold text-ink-2">숭실대학교 창업동아리 시너지</span>
+      <span class="rounded-full bg-brand-tint text-brand-deep px-3 py-1 text-xs font-semibold">StartupXperience 2026 · 산학협력</span>
+      <span class="rounded-full bg-white border border-black/5 shadow-soft px-3 py-1 text-xs font-semibold text-ink-2">30분 · 온라인 가능</span>
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] max-w-3xl">
+      미팅이 끝난 뒤,<br/><span class="text-brand">진짜 일</span>은 누가 하고 있나요?
+    </h1>
+    <p class="mt-6 text-lg text-ink-2 max-w-2xl leading-relaxed">
+      회의록은 AI가 써 주는 시대가 됐지만, 보고서·제안서·후속 메일은 여전히 사람이 만들고 다시 고칩니다.
+      저희는 그 <b class="text-ink">“미팅 이후의 시간”</b>을 실무자·대표님·AI 서비스 운영자의 목소리로 확인하려는 숭실대 창업동아리 시너지의 <b class="text-ink">Pelyn 검증팀</b>입니다.
+    </p>
+    <div class="mt-9 flex flex-wrap items-center gap-3">
+      <a href="#contact" class="rounded-2xl bg-brand text-white font-semibold px-6 py-3.5 shadow-float hover:bg-brand-deep transition">30분 커피챗 일정 잡기</a>
+      <a href="#plan" class="rounded-2xl bg-white border border-black/10 font-semibold px-6 py-3.5 shadow-soft hover:border-black/20 transition">어떤 질문을 드리나요?</a>
+    </div>
+
+    <!-- quick facts -->
+    <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div class="rounded-2xl bg-white shadow-soft p-5"><div class="text-xs text-ink-3 font-medium">소요 시간</div><div class="mt-1.5 text-lg font-bold">30분 내외</div></div>
+      <div class="rounded-2xl bg-white shadow-soft p-5"><div class="text-xs text-ink-3 font-medium">방식</div><div class="mt-1.5 text-lg font-bold">온라인 / 대면</div></div>
+      <div class="rounded-2xl bg-white shadow-soft p-5"><div class="text-xs text-ink-3 font-medium">가능 기간</div><div class="mt-1.5 text-lg font-bold">11/19 – 11/23</div></div>
+      <div class="rounded-2xl bg-white shadow-soft p-5"><div class="text-xs text-ink-3 font-medium">목적</div><div class="mt-1.5 text-lg font-bold">프로젝트 자문 요청</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY (명분) ========== -->
+<section id="why" class="py-20 sm:py-24 bg-white border-y border-black/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <div class="text-xs font-bold tracking-[0.18em] text-brand uppercase">01 · Why we reach out</div>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">학생 과제가 아니라,<br/>실제 기업의 문제를 풉니다</h2>
+      <p class="mt-4 text-ink-2 leading-relaxed">StartupXperience는 숭실대 창업동아리 시너지가 매년 2학기 진행하는 기업 미션 프로젝트입니다. 올해 시너지의 <b class="text-ink">Pelyn 검증팀</b>은 AI 지식 운영 서비스 Pelyn AI를 주제로, 실제 사용자와 시장의 목소리를 모아 서비스 개선 방향을 검증하고 있습니다.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl bg-paper p-7">
+        <div class="text-4xl font-extrabold tracking-tight">32<span class="text-xl">년</span></div>
+        <div class="mt-2 font-semibold">교내 최장수 창업동아리</div>
+        <p class="mt-2 text-sm text-ink-2 leading-relaxed">1995년 시작, 2023년 숭실대 창업지원단 공식 협력 동아리로 인준되었습니다.</p>
+      </div>
+      <div class="rounded-2xl bg-paper p-7">
+        <div class="text-4xl font-extrabold tracking-tight">2<span class="text-xl">개월</span></div>
+        <div class="mt-2 font-semibold">기업 미션 프로젝트</div>
+        <p class="mt-2 text-sm text-ink-2 leading-relaxed">도메인 학습 → 솔루션 기획·검증 → 최종 발표.</p>
+      </div>
+      <div class="rounded-2xl bg-ink text-white p-7 relative overflow-hidden">
+        <span class="absolute top-5 right-5 rounded-full bg-brand px-2.5 py-1 text-[11px] font-bold">D-DAY 11/24</span>
+        <div class="text-4xl font-extrabold tracking-tight">최종 발표 <span class="text-xl">11/24</span></div>
+        <div class="mt-2 font-semibold">기업 앞 개선안 발표</div>
+        <p class="mt-2 text-sm text-white/70 leading-relaxed">여러분과 나눈 이야기는 익명화되어 개선안의 근거로 쓰이고, 결과는 원하시는 분께 공유드립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROBLEM ========== -->
+<section id="problem" class="py-20 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <div class="text-xs font-bold tracking-[0.18em] text-brand uppercase">02 · The problem we see</div>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">“기록”은 해결됐고,<br/>“결과물”은 아직입니다</h2>
+      <p class="mt-4 text-ink-2 leading-relaxed">해외 시장과 사용자 리뷰를 먼저 살펴보니, 사람들이 AI에 실망하는 지점은 기록이 아니라 그 다음 단계에 있었습니다. 아래는 저희의 <b class="text-ink">가설</b>이고, 커피챗으로 맞는지 확인하고 싶습니다.</p>
+    </div>
+
+    <!-- flow -->
+    <div class="mt-12 rounded-2xl bg-white shadow-soft p-6 sm:p-8">
+      <div class="grid sm:grid-cols-4 gap-3 items-stretch">
+        <div class="rounded-xl bg-paper p-5">
+          <div class="text-[11px] font-bold text-ink-3">STEP 1</div>
+          <div class="mt-1 font-bold">고객·팀 미팅</div>
+          <div class="mt-1 text-sm text-ink-2">결정사항과 할 일이 쏟아짐</div>
+        </div>
+        <div class="rounded-xl bg-paper p-5">
+          <div class="text-[11px] font-bold text-ink-3">STEP 2</div>
+          <div class="mt-1 font-bold">AI 요약·초안</div>
+          <div class="mt-1 text-sm text-ink-2">이제는 흔하고, 대부분 무료</div>
+        </div>
+        <div class="rounded-xl border-2 border-brand bg-brand-tint p-5 relative">
+          <span class="absolute -top-3 left-4 rounded-full bg-brand text-white px-2.5 py-0.5 text-[11px] font-bold shadow-float">여기서 맥락이 끊김</span>
+          <div class="text-[11px] font-bold text-brand-deep">STEP 3</div>
+          <div class="mt-1 font-bold">맥락 옮기기·재설정</div>
+          <div class="mt-1 text-sm text-ink-2">검수한 내용을 파일로 내려받아 다른 AI에 옮기고, 매번 프롬프트를 다시 설정</div>
+        </div>
+        <div class="rounded-xl bg-paper p-5">
+          <div class="text-[11px] font-bold text-ink-3">STEP 4</div>
+          <div class="mt-1 font-bold">후속 결과물 완성</div>
+          <div class="mt-1 text-sm text-ink-2">보고서·제안서·후속 메일을 확인 후 발송</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl bg-white shadow-soft p-7">
+        <div class="h-9 w-9 rounded-xl bg-brand-tint text-brand font-extrabold flex items-center justify-center">1</div>
+        <h3 class="mt-4 font-bold text-lg">“요약 다음이 진짜 일이다”</h3>
+        <p class="mt-2 text-sm text-ink-2 leading-relaxed">회의 요약은 화상회의 툴의 기본 기능이 될 만큼 흔해졌습니다. 사람들이 원하는 것은 그다음, 미팅 맥락을 그대로 이어받아 <b class="text-ink">결정사항·할 일·후속 메일·제안서</b>까지 바로 쓸 수 있게 만들어 주는 후속 업무였습니다.</p>
+      </div>
+      <div class="rounded-2xl bg-white shadow-soft p-7">
+        <div class="h-9 w-9 rounded-xl bg-brand-tint text-brand font-extrabold flex items-center justify-center">2</div>
+        <h3 class="mt-4 font-bold text-lg">“책임 있는 검수, 무의미한 자동화”</h3>
+        <p class="mt-2 text-sm text-ink-2 leading-relaxed">사람의 승인 없이 AI가 알아서 보내는 것에 대한 거부감이 컸습니다. 신뢰는 자동화보다 <b class="text-ink">확인 과정</b>에서 생깁니다.</p>
+      </div>
+      <div class="rounded-2xl bg-white shadow-soft p-7">
+        <div class="h-9 w-9 rounded-xl bg-brand-tint text-brand font-extrabold flex items-center justify-center">3</div>
+        <h3 class="mt-4 font-bold text-lg">Human-in-the-Loop</h3>
+        <p class="mt-2 text-sm text-ink-2 leading-relaxed">그래서 저희는 “AI가 만들고, 사람이 체크리스트로 확인한 뒤 내보내는” 흐름이 실제 현장에서 의미가 있는지 묻고 싶습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOLUTION (Pelyn Crew) ========== -->
+<section id="solution" class="py-20 sm:py-24 bg-ink text-white relative overflow-hidden">
+  <div class="absolute -left-32 top-10 h-80 w-80 rounded-full bg-brand/30 blur-3xl"></div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div class="max-w-2xl">
+        <div class="text-xs font-bold tracking-[0.18em] text-brand uppercase">03 · How Pelyn solves it</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Pelyn Crew 핵심 워크플로우<br/><span class="text-white/60">미팅이 끝나면, 다음 업무가 이어집니다</span></h2>
+        <p class="mt-4 text-white/70 leading-relaxed">파일을 내려받아 옮기거나 프롬프트를 매번 다시 쓰지 않아도, 미팅의 맥락이 업무를 맡은 Crew에게 그대로 이어지고 다음 미팅까지 연결됩니다.</p>
+      </div>
+      <span class="self-start md:self-auto rounded-full bg-brand px-3.5 py-1.5 text-xs font-bold shadow-float">모든 단계 커스텀 가능</span>
+    </div>
+
+    <ol class="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+      <li class="rounded-2xl bg-white/5 border border-white/10 p-6">
+        <div class="text-xs font-bold text-brand">STEP 1</div>
+        <h3 class="mt-2 font-bold">미팅·회의 진행</h3>
+        <p class="mt-2 text-sm text-white/60">녹음하면 결정사항과 할 일이 근거와 함께 정리됩니다.</p>
+      </li>
+      <li class="rounded-2xl bg-white/5 border border-white/10 p-6">
+        <div class="text-xs font-bold text-brand">STEP 2</div>
+        <h3 class="mt-2 font-bold">Crew 생성</h3>
+        <p class="mt-2 text-sm text-white/60">후속 업무를 맡을 AI 팀원을 만듭니다.</p>
+      </li>
+      <li class="rounded-2xl bg-white/5 border border-white/10 p-6">
+        <div class="text-xs font-bold text-brand">STEP 3</div>
+        <h3 class="mt-2 font-bold">스킬·템플릿 연결</h3>
+        <p class="mt-2 text-sm text-white/60">우리 팀이 쓰는 형식과 방식을 한 번만 연결해 둡니다.</p>
+      </li>
+      <li class="rounded-2xl bg-white text-ink p-6 shadow-float relative">
+        <span class="absolute -top-3 right-4 rounded-full bg-brand text-white px-2.5 py-0.5 text-[11px] font-bold">핵심</span>
+        <div class="text-xs font-bold text-brand">STEP 4</div>
+        <h3 class="mt-2 font-bold">후속 업무 진행</h3>
+        <p class="mt-2 text-sm text-ink-2">미팅 내용을 근거로 후속 메일·제안서·할 일 정리를 만들고, 확인 후 완성합니다.</p>
+      </li>
+      <li class="rounded-2xl bg-white/5 border border-white/10 p-6">
+        <div class="text-xs font-bold text-brand">STEP 5</div>
+        <h3 class="mt-2 font-bold">다음 미팅·회의</h3>
+        <p class="mt-2 text-sm text-white/60">이전 맥락을 기억한 채로 다음 미팅이 시작됩니다.</p>
+      </li>
+    </ol>
+    <div class="mt-4 rounded-2xl border border-dashed border-white/20 px-5 py-3 text-center text-sm text-white/60">↻ 다음 미팅의 기록이 다시 STEP 1로 이어져, 프로젝트의 맥락이 계속 쌓입니다</div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="rounded-2xl bg-white/5 border border-white/10 p-8">
+        <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">Customizable</span>
+        <h3 class="mt-4 text-xl font-bold">각자의 업무에 맞게</h3>
+        <p class="mt-3 text-sm text-white/70 leading-relaxed">어떤 Crew를 만들지, 어떤 스킬과 템플릿을 연결할지, 결과물을 어떤 기준으로 확인할지 모두 직무와 사용 방식에 따라 바꿀 수 있습니다. 컨설턴트의 보고서, 영업 담당자의 후속 메일, PM의 할 일 공유처럼 같은 흐름을 서로 다른 업무에 맞춰 씁니다.</p>
+      </div>
+      <div class="rounded-2xl bg-white text-ink p-8 shadow-soft">
+        <span class="rounded-full bg-brand-tint text-brand-deep px-3 py-1 text-xs font-semibold">사용자 인터뷰에서 들은 이야기</span>
+        <h3 class="mt-4 text-xl font-bold">“요약은 이미 쓰고 있어요.<br/>문제는 그다음이에요.”</h3>
+        <p class="mt-3 text-sm text-ink-2 leading-relaxed">인터뷰에 참여한 분들 중 AI 요약 기능을 쓰는 사람은 많았지만, 요약만으로는 차이를 느끼지 못했습니다. 대신 <b class="text-ink">요약을 실제 업무에 얼마나 유용하게 이어주느냐</b>에 따라 Pelyn을 선택할 의향이 있다고 답했습니다. 이번 커피챗에서 그 “유용함”의 기준을 더 구체적으로 듣고 싶습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PLAN (A/B/C) ========== -->
+<section id="plan" class="py-20 sm:py-24 bg-white border-y border-black/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div class="max-w-2xl">
+        <div class="text-xs font-bold tracking-[0.18em] text-brand uppercase">04 · What we'd love to ask</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">하시는 일에 맞춰<br/>질문을 준비했습니다</h2>
+        <p class="mt-4 text-ink-2">정답이 있는 질문은 없습니다. 평소 일하시는 방식을 편하게 들려주시면 됩니다.</p>
+      </div>
+      <div role="tablist" aria-label="대상 선택" class="inline-flex flex-wrap gap-2 rounded-2xl bg-paper p-1.5">
+        <button role="tab" aria-selected="true" aria-controls="panel-a" id="tab-a" class="tab-btn rounded-xl px-4 py-2 text-sm font-semibold text-ink-2 transition">실무자</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-b" id="tab-b" class="tab-btn rounded-xl px-4 py-2 text-sm font-semibold text-ink-2 transition">대표·팀장</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-c" id="tab-c" class="tab-btn rounded-xl px-4 py-2 text-sm font-semibold text-ink-2 transition">AI 서비스 운영자</button>
+      </div>
+    </div>
+
+    <!-- Panel A -->
+    <div role="tabpanel" id="panel-a" aria-labelledby="tab-a" class="tab-panel mt-10 grid lg:grid-cols-5 gap-4">
+      <div class="lg:col-span-2 rounded-2xl bg-ink text-white p-8">
+        <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">For · PM / 영업 / 마케터 / 컨설턴트·AE</span>
+        <h3 class="mt-5 text-2xl font-extrabold leading-snug">미팅이 끝난 뒤의<br/>반복 업무를 듣고 싶어요</h3>
+        <p class="mt-3 text-white/70 text-sm leading-relaxed">어떤 결과물을, 얼마나 자주, 몇 시간씩 만들고 계신지. 지금은 무엇으로 해결하고 계신지.</p>
+        <div class="mt-8 space-y-3 text-sm">
+          <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/60">알고 싶은 것</span><span class="font-semibold">반복 업무 · 소요 시간 · 해결 방식</span></div>
+          <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/60">시간</span><span class="font-semibold">20–30분</span></div>
+          <div class="flex justify-between"><span class="text-white/60">준비물</span><span class="font-semibold">없음</span></div>
+        </div>
+      </div>
+      <ol class="lg:col-span-3 rounded-2xl bg-paper p-6 sm:p-8 space-y-4">
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q1</span><span>최근 일주일 동안 고객·팀 미팅이 몇 번 정도 있었나요? 미팅이 끝나면 보통 어떤 결과물을 만드시나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q2</span><span>그중 가장 반복적이고 귀찮은 일 하나를 꼽는다면요? (예: 회의록 정리, 후속 메일, 제안서 수정, 할 일 공유)</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q3</span><span>그 일에 미팅 1건당 대략 몇 분이 드나요? 가장 오래 걸리는 단계는 어디인가요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q4</span><span>지금은 어떤 도구로 처리하고 계신가요? 그 도구에 월 비용을 내고 계시다면 회사 결제인지 개인 결제인지, 회사에서 써도 되는지 따로 확인 절차가 있었는지도 궁금합니다.</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q5</span><span>고객에게 나가기 전, 꼭 직접 확인하는 항목이 있나요? 그게 체크리스트로 정리되어 있다면 도움이 될까요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q6</span><span>“이 정도면 매일 쓰겠다”는 기준이 있다면 무엇일까요?</span></li>
+      </ol>
+    </div>
+
+    <!-- Panel B -->
+    <div role="tabpanel" id="panel-b" aria-labelledby="tab-b" class="tab-panel mt-10 grid lg:grid-cols-5 gap-4" hidden>
+      <div class="lg:col-span-2 rounded-2xl bg-ink text-white p-8">
+        <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">For · 중소기업·스타트업 대표 / 팀장 / 경영지원</span>
+        <h3 class="mt-5 text-2xl font-extrabold leading-snug">지금 팀은 어떤 도구로<br/>일하고 있나요?</h3>
+        <p class="mt-3 text-white/70 text-sm leading-relaxed">지금 쓰는 도구와 비용, 새 도구를 들일 때 누가 결정하는지, 보안 검토는 어떻게 하는지 듣고 싶습니다.</p>
+        <div class="mt-8 space-y-3 text-sm">
+          <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/60">알고 싶은 것</span><span class="font-semibold">사용 도구 · 월 비용 · 결재 · 보안</span></div>
+          <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/60">시간</span><span class="font-semibold">20–30분</span></div>
+          <div class="flex justify-between"><span class="text-white/60">준비물</span><span class="font-semibold">없음</span></div>
+        </div>
+      </div>
+      <ol class="lg:col-span-3 rounded-2xl bg-paper p-6 sm:p-8 space-y-4">
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q1</span><span>팀에서 회의 기록·문서·협업에 지금 쓰는 도구는 무엇인가요? (예: 노션, 슬랙, 클로바노트, ChatGPT 등)</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q2</span><span>그 도구들에 매달 지출하는 비용은 대략 어느 정도인가요? 회사 결제와 개인 결제가 섞여 있나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q3</span><span>새 업무 도구를 들일 때 최종 결재는 누가 하나요? 제안부터 결재까지 보통 어떤 과정을 거치나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q4</span><span>AI 도구를 쓰기 전에 보안 검토를 하시나요? 한다면 무엇을 확인하고, 누가 판단하나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q5</span><span>회의 내용이나 고객 정보를 외부 AI 서비스에 올리는 것에 대한 사내 기준이 있나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q6</span><span>최근 들였거나 쓰다가 그만둔 도구가 있다면, 그 이유는 무엇이었나요?</span></li>
+      </ol>
+    </div>
+
+    <!-- Panel C -->
+    <div role="tabpanel" id="panel-c" aria-labelledby="tab-c" class="tab-panel mt-10 grid lg:grid-cols-5 gap-4" hidden>
+      <div class="lg:col-span-2 rounded-2xl bg-ink text-white p-8">
+        <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">For · AI 서비스 창업자 / PO / 운영자</span>
+        <h3 class="mt-5 text-2xl font-extrabold leading-snug">먼저 겪어보신<br/>분께 배우고 싶어요</h3>
+        <p class="mt-3 text-white/70 text-sm leading-relaxed">AI 서비스를 운영하며 본 고객사의 도구 환경, 비용 결정 방식, 결재와 보안 검토 과정을 운영자의 관점에서 듣고 싶습니다.</p>
+        <div class="mt-8 space-y-3 text-sm">
+          <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/60">알고 싶은 것</span><span class="font-semibold">고객 도구 · 비용 · 결재 · 보안</span></div>
+          <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/60">시간</span><span class="font-semibold">30분</span></div>
+          <div class="flex justify-between"><span class="text-white/60">준비물</span><span class="font-semibold">없음</span></div>
+        </div>
+      </div>
+      <ol class="lg:col-span-3 rounded-2xl bg-paper p-6 sm:p-8 space-y-4">
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q1</span><span>고객사들은 보통 어떤 도구와 함께 쓰시나요? 이미 쓰고 있는 도구와의 연동 요청은 어떤 것이 많았나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q2</span><span>고객이 월 비용을 판단할 때 무엇과 비교하던가요? 개인 결제로 시작해 회사 결제로 넘어가는 경우도 있었나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q3</span><span>기업 고객은 도입 결정을 누가 내리던가요? 실무자 추천부터 결재까지 보통 어떤 과정을 거쳤나요?</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q4</span><span>보안 검토를 요구받은 적이 있나요? 고객사가 주로 확인한 항목은 무엇이었나요? (데이터 저장 위치, 학습 사용 여부, 접근 권한 등)</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q5</span><span>AI 결과물을 고객이 믿게 만들기 위해 어떤 장치를 두셨나요? (근거 표시, 사람 검수, 승인 단계 등)</span></li>
+        <li class="flex gap-4"><span class="shrink-0 h-7 w-7 rounded-lg bg-white shadow-soft text-xs font-bold flex items-center justify-center">Q6</span><span>도입을 검토하다 멈춘 고객이 있었다면, 도구·비용·결재·보안 중 어디에서 주로 멈췄나요?</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW ========== -->
+<section id="how" class="py-20 sm:py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <div class="text-xs font-bold tracking-[0.18em] text-brand uppercase">05 · How it works</div>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">부담 없이, 딱 30분</h2>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-2xl bg-white shadow-soft p-6"><div class="text-sm font-bold text-brand">01</div><h3 class="mt-3 font-bold">회신 한 줄</h3><p class="mt-2 text-sm text-ink-2">가능한 날짜·시간만 알려주세요.</p></div>
+      <div class="rounded-2xl bg-white shadow-soft p-6"><div class="text-sm font-bold text-brand">02</div><h3 class="mt-3 font-bold">일정 확정</h3><p class="mt-2 text-sm text-ink-2">온라인 링크 또는 대면 장소를 드립니다.</p></div>
+      <div class="rounded-2xl bg-white shadow-soft p-6"><div class="text-sm font-bold text-brand">03</div><h3 class="mt-3 font-bold">30분 대화</h3><p class="mt-2 text-sm text-ink-2">위 질문 중 편한 것만 골라 이야기합니다.</p></div>
+      <div class="rounded-2xl bg-white shadow-soft p-6"><div class="text-sm font-bold text-brand">04</div><h3 class="mt-3 font-bold">결과 공유</h3><p class="mt-2 text-sm text-ink-2">원하시면 11/24 발표 후 인사이트 요약을 보내드립니다.</p></div>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="rounded-2xl bg-white shadow-soft p-8">
+        <h3 class="font-bold text-lg">참여해 주시면</h3>
+        <ul class="mt-5 space-y-3 text-sm text-ink-2">
+          <li class="flex gap-3"><span class="text-brand font-bold">✓</span>최종 발표에서 도출된 개선 방향 공유</li>
+          <li class="flex gap-3"><span class="text-brand font-bold">✓</span>대학생 창업 인재와의 연결 (시너지 재학생 120여 명, 졸업생 네트워크 300여 명)</li>
+        </ul>
+        <p class="mt-4 text-xs text-ink-3">* 희망하시는 분께만 전달드립니다.</p>
+      </div>
+      <div class="rounded-2xl bg-white shadow-soft p-8">
+        <h3 class="font-bold text-lg">저희가 지키는 약속</h3>
+        <ul class="mt-5 space-y-3 text-sm text-ink-2">
+          <li class="flex gap-3"><span class="text-brand font-bold">●</span>성함·회사명은 익명으로 처리하고, 직무·업종 수준으로만 인용합니다.</li>
+          <li class="flex gap-3"><span class="text-brand font-bold">●</span>녹음은 동의하실 때만 하며, 원하지 않으시면 메모로만 기록합니다.</li>
+          <li class="flex gap-3"><span class="text-brand font-bold">●</span>판매나 가입 권유를 하지 않습니다. 언제든 대화를 멈추셔도 괜찮습니다.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section id="contact" class="pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="relative overflow-hidden rounded-3xl bg-ink text-white p-10 sm:p-14">
+      <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/40 blur-3xl"></div>
+      <div class="relative grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">11/19 – 11/23 일정 우선</span>
+          <h2 class="mt-5 text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">30분이면 충분합니다.<br/>이야기를 들려주세요.</h2>
+          <p class="mt-4 text-white/70">편하신 날짜와 방식(온라인/대면)만 회신해 주시면, 저희가 맞춰서 준비하겠습니다.</p>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8">
+          <div class="text-sm text-white/60">숭실대학교 창업동아리 시너지 · StartupXperience Pelyn 검증팀</div>
+          <div class="mt-2 text-xl font-bold">정찬우</div>
+          <div class="mt-5 space-y-2 text-sm">
+            <div class="flex justify-between gap-4"><span class="text-white/60">이메일</span><span class="font-semibold">hee@soongsil.ac.kr</span></div>
+            <div class="flex justify-between gap-4"><span class="text-white/60">연락처</span><span class="font-semibold">010-9223-6550</span></div>
+          </div>
+          <a href="mailto:hee@soongsil.ac.kr?subject=%5B%EC%BB%A4%ED%94%BC%EC%B1%97%5D%20%EA%B0%80%EB%8A%A5%ED%95%9C%20%EC%9D%BC%EC%A0%95%20%ED%9A%8C%EC%8B%A0" class="mt-7 block text-center rounded-2xl bg-brand hover:bg-white hover:text-ink font-semibold px-6 py-3.5 transition">메일로 일정 회신하기</a>
+          <p class="mt-4 text-center text-xs text-white/60 leading-relaxed">커피챗이 어려우시더라도, 프로젝트에 대해 궁금하신 점이나 나눠 주실 의견이 있다면 <a href="mailto:hee@soongsil.ac.kr?subject=%5BPelyn%20%EA%B2%80%EC%A6%9D%ED%8C%80%5D%20%EB%AC%B8%EC%9D%98" class="underline underline-offset-2 hover:text-white">메일로 편하게 회신</a> 부탁드립니다.</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-ink-3">본 페이지는 숭실대학교 창업동아리 시너지 StartupXperience 산학협력 프로젝트의 인터뷰 요청용 자료입니다.</p>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('[role="tab"]');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.setAttribute('aria-selected', 'false');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = true;
+      });
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = false;
+    });
+  });
+</script>
+</body>
+</html>
